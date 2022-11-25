@@ -1,0 +1,10 @@
+.footer-card {
+    background: rgba(35, 11, 11, 0.706);
+    height: 100px;
+    width: 100%;
+    padding: 30px;
+}
+
+.footer-text {
+    margin-left: 43%;
+}

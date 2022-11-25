@@ -1,0 +1,17 @@
+.card {
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    border: 1px solid #b4670f;
+    border-radius: 25px;
+    padding: 50px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
