@@ -1,0 +1,63 @@
+{
+    "info": {
+        "_postman_id": "4b557af0-9cfe-4c64-8a66-48a386971e55",
+        "name": "Simple Auth",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Register a new user",
+            "id": "2cf03d23-5bec-4532-b17d-84668694bd31",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\" : \"Jhone Doe\",\n    \"email\": \"jone@supersimple.com\",\n    \"password\": \"htJhone@2434\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "{{base_url}}/api/v1/authenticate/register"
+            },
+            "response": []
+        },
+        {
+            "name": "Login user",
+            "id": "d350e0b9-ddd7-46ca-bd9c-938c7dc61244",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"email\": \"jone@supersimple.com\",\n    \"password\": \"htJhone@2434\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "{{base_url}}/api/v1/authenticate/login"
+            },
+            "response": []
+        },
+        {
+            "name": "Refresh user token",
+            "id": "a4d1289e-a367-42fb-bf06-c7cd87c16b10",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb25lQHN1cGVyc2ltcGxlLmNvbSIsImlhdCI6MTY2NjU1MDQ2OCwiZXhwIjoxNjk4MDg2NDY4fQ.ukNzcP0it9I1TfMqR2dGRTiWUk_V1LrsVDoil-ww7rI"
+                    }
+                },
+                "method": "POST",
+                "header": [],
+                "url": "{{base_url}}/api/v1/authenticate/refresh"
+            },
+            "response": []
+        }
+    ]
+}

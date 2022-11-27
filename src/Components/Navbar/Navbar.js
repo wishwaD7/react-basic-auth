@@ -1,7 +1,7 @@
 import { Row, Col } from 'antd'
 import React from 'react'
 // import { Image } from 'antd'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 
@@ -16,7 +16,7 @@ function Navbar() {
                     <Col span={16}>
                         <div className='ant-drawer-body' >
                             <ul className='list-inline no-bullets' >
-                                <li className='list-inline-item'><Link to="/" className='navbarlink'>Home</Link></li>
+                                {/* <li className='list-inline-item'><Link to="" className='navbarlink'>Home</Link></li> */}
                             </ul>
                         </div></Col>
                 </Row>
