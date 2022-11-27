@@ -3,7 +3,10 @@ import { Form, Input, Button, message } from 'antd'
 import { useDispatch } from 'react-redux'
 import { login } from '../../Redux/Auth'
 import api from '../../Service/API'
-import { Link, useNavigate } from 'react-router-dom'
+import {
+    // Link,
+    useNavigate
+} from 'react-router-dom'
 import './login.css'
 
 function Login() {
@@ -21,7 +24,7 @@ function Login() {
                 email: values.email, password: values.password
             }).then(res => {
                 if (res.status === 200) {
-                    dispatch(login(res.data.access_token))
+                    dispatch(login(res.data.payload))
                     setLoading(false)
                     message.success('Welcome!');
                     navigate('/')
